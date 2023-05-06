@@ -7,24 +7,24 @@ Console.WriteLine($" -> {HowManyPositive(array)}");
 
 int HowManyPositive(int[] arr)
 {
-    int count =0;
-    foreach(int el in arr)
-        if (el>0) count++;
+    int count = 0;
+    foreach (int el in arr)
+        if (el > 0) count++;
     return count;
 }
 
-int [] GetMassiveByUser()
+int[] GetMassiveByUser()
 {
-int n = GetUserInput("Сколько чисел вы хотите ввести? ", "Ошибка ввода!");
+    int n = GetUserInput("Сколько чисел вы хотите ввести? ", "Ошибка ввода!");
 
-int[] arr = new int[n];
-for (int i = 0; i<n; i++)
-    arr[i] = GetUserInput($"Введите число №{i+1}: ", "Ошибка ввода!");
-return arr;
+    int[] arr = new int[n];
+    for (int i = 0; i < n; i++)
+        arr[i] = GetUserInput($"Введите число №{i + 1}: ", "Ошибка ввода!");
+    return arr;
 }
 
 
-static void PrintArray(int [] arr)
+static void PrintArray(int[] arr)
 {
     Console.Write("[");
     Console.Write(String.Join(", ", arr));
